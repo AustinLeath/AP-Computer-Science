@@ -14,7 +14,8 @@ public class TempConverter
 
       celsius = (fahrenheit - 32.0) * 0.5556;
 
-      System.out.println("The equivalent in Celsius is" + " " + celsius +  "\u00b0" + " " + "Celsius");
+      System.out.println("The equivalent in Celsius is " + celsius + "\u00b0" + "Celsius");
+      System.out.println("In Kelvin " + fahrenheit + "\u00b0 Fahrenheit is: " + (fahrenheit + 273) + "\u00b0 Kelvin" );
     }
    }
   }
