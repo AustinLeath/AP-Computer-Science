@@ -21,13 +21,11 @@ public class PythagSolver {
       System.out.println((B * B) + (C * C));
     }
     if (B == '0') {
-      System.out.println((A * A) + (B * B));
+      System.out.println((A * A) + (C * C));
     }
     if (C == '0') {
-      System.out.println((B * B) + (C * C));
+      System.out.println((A * A) + (B * B));
     }
-
-
-    }
+   }
   }
 }

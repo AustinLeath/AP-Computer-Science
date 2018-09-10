@@ -26,6 +26,5 @@ public class R6RC {
     } else {
     System.out.println("You don't need to win or lose any matches to reach your rank goal");
     }
-
   }
 }
