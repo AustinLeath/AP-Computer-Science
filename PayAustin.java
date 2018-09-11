@@ -19,6 +19,8 @@ public class PayAustin {
     OvertimeHours = input.nextDouble();
 
     OvertimePay = ((HourlyPay * WeeklyHours) + ((HourlyPay * 1.5) * OvertimeHours));
+    System.out.print("You will be paid: \u0024");
     System.out.print(OvertimePay);
+    System.out.print(" this week");
   }
 }
