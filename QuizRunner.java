@@ -11,10 +11,9 @@ public class QuizRunner
       test.two();
       test.one();
       test.two();
-
-
       test.one();
       test.three();
+      
       test.two();
    }
 }

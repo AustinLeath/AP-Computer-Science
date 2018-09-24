@@ -8,7 +8,6 @@ public class PayAustin {
     double OvertimeHours = 0.0;
     double OvertimePay = 0.0;
 
-
     System.out.print("Enter hourly pay:");
     HourlyPay = input.nextDouble();
 
