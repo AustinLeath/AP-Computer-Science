@@ -1,54 +1,43 @@
-//Name -
-//Date -
-//Class -
-//Lab  -
-
-import java.util.Scanner; 
+import java.util.Scanner;
 import static java.lang.System.*;
 import static java.lang.Math.*;
 
 public class Distance
 {
-	private int xOne,yOne,xTwo,yTwo;
-	private double distance;
+	private int x1,y1,x2,y2;
 
 	public Distance()
 	{
-      setCoordinates(0,0,0,0);
-      distance=0;
+
+
 	}
 
-	public Distance(int x1, int y1, int x2, int y2)
+	public Distance(int xOne, int yOne, int xTwo, int yTwo)
 	{
-      setCoordinates(x1,y1,x2,y2); 	
-      distance=0.0;
-   }
 
-	public void setCoordinates(int x1, int y1, int x2, int y2)
-	{
-      xOne=x1;
-      yOne=y1;
-      xTwo=x2;
-      yTwo=y2;
-      
-   }
 
-	public void calcDistance()
-	{
-      distance=(Math.sqrt(Math.pow((xTwo-xOne),2)+(Math.pow((yTwo-yOne),2))));
 	}
-	
-	public double getDistance()
+
+	public void setCoordinates(int xOne, int yOne, int xTwo, int yTwo)
 	{
-		return 0.0;
+      x1=xOne;
+      x2=xTwo;
+      y1=yOne;
+      y2=yTwo;
 	}
-	
-	public void print()
+
+	public String determineClosest( )
 	{
-      out.println("distance == " + distance);
+		double distanceA = 0.0, distanceB = 0.0;
+		String result="";
+      distanceA = Math.sqrt((Math.pow((x1),2)) + (Math.pow((y1),2)));
+      distanceB = Math.sqrt((Math.pow((x2),2)) + (Math.pow((y2),2)));
+         if (distanceA > distanceB)
+         System.out.println("B is closer to (0,0)");
+         else
+         System.out.println("A is closer to (0,0)");
+		return result;
 	}
-	
-	//complete print or the toString
 
 	public String toString()
 	{
