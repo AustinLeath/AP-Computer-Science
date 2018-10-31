@@ -23,7 +23,7 @@ public void CreateUser() {
 
 public void Confirmation() {
   System.out.println("The passwords that you entered are a match!");
-  StartGame();
+  Questionone();
 }
 
 public void TryAgain() {
@@ -31,7 +31,40 @@ public void TryAgain() {
   CreateUser();
 }
 
-public void StartGame() {
-  System.out.println("GAME STARTS HERE");
+public void Questionone() {
+  System.out.print("Is the earth round? ");
+  String answer = keyboard.next();
+
+  if(answer.equals("yes")) {
+      System.out.println("Correct, the earth is round");
+      Questiontwo();
+  } else if(answer.equals("no")) {
+      System.out.println("False, the earth is round");
+      Questiontwo();
+  } else {
+      System.out.println("The answer you submitted is only a yes or no question, try again");
+      Questionone();
+  }
+ }
+
+ public void Questiontwo() {
+   System.out.print("Is the sum of 2+2 = 4? ");
+   String answer = keyboard.next();
+
+   if(answer.equals("yes")) {
+      System.out.println("Correct, 2+2 = 4");
+      Questionthree();
+   } else if(answer.equals("no")) {
+      System.out.println("False, 2+2 = 4");
+      Questionthree();
+   } else {
+      System.out.println("The answer you submitted is only a yes or no question, try again.");
+      Questiontwo();
+   }
+ }
+
+ public void Questionthree() {
+   System.out.print("Is Dallas the capital of Texas? ");
+   String answer = keyboard.next();
  }
 }
