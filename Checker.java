@@ -1,30 +1,27 @@
-public class Checker {
-  private int one,two;
-
-  public Checker(int n1, int n2) {
-
+public class Checker
+{
+  private int one, two;
+  public Checker(int n1, int n2)
+  {
+    setNums(n1, n2);
   }
-
-  public void setNums(int n1,int n2) {
-
-    numberOne = n1;
-		numberTwo = n2;
-
+  public void setNums(int n1, int n2)
+  {
+   one = n1;
+   two = n2;
   }
-
   public boolean compare() {
-    if(numberOne == numberTwo) {
+    if(one == two) {
       return true;
     } else {
       return false;
     }
   }
-
   public String toString() {
-    if(compare = true) {
-      return numberOne + " and " + numberTwo + " are equal";
+    if(compare()) {
+      return one + " and " + two + " are equal";
     } else {
-      return numberOne + " and " + numberTwo + " are not equal";
+      return one + " and " + two + " are not equal";
     }
   }
 }

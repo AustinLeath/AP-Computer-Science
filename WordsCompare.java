@@ -22,7 +22,6 @@ public class WordsCompare
 	public WordsCompare(String one, String two)
 	{
 		setWords(one,two);
-		compare = 0;
 	}
 
 	public void setWords(String one, String two)
