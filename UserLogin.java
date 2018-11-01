@@ -42,7 +42,7 @@ public void Questionone() {
       System.out.println("False, the earth is round");
       Questiontwo();
   } else {
-      System.out.println("The answer you submitted is only a yes or no question, try again");
+      System.out.println("The answer you submitted is a yes or no question, try again");
       Questionone();
   }
  }
@@ -58,7 +58,7 @@ public void Questionone() {
       System.out.println("False, 2+2 = 4");
       Questionthree();
    } else {
-      System.out.println("The answer you submitted is only a yes or no question, try again.");
+      System.out.println("The answer you submitted is a yes or no question, try again");
       Questiontwo();
    }
  }
@@ -66,5 +66,20 @@ public void Questionone() {
  public void Questionthree() {
    System.out.print("Is Dallas the capital of Texas? ");
    String answer = keyboard.next();
+
+   if(answer.equals("yes")) {
+      System.out.println("False, Austin is the capital of Texas");
+      Endoftest();
+   } else if(answer.equals("no")) {
+      System.out.println("Correct, Austin is the capital of Texas");
+      Endoftest();
+   } else {
+      System.out.println("The answer you submitted is a yes or no question, try again");
+      Questionthree();
+   }
+ }
+
+ public void Endoftest() {
+   System.out.println("Thank you for your responses");
  }
 }
