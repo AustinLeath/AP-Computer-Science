@@ -69,13 +69,29 @@ public void Questionone() {
 
    if(answer.equals("yes")) {
       System.out.println("False, Austin is the capital of Texas");
-      Endoftest();
+      Questionfour();
    } else if(answer.equals("no")) {
       System.out.println("Correct, Austin is the capital of Texas");
-      Endoftest();
+      Questionfour();
    } else {
       System.out.println("The answer you submitted is a yes or no question, try again");
       Questionthree();
+   }
+ }
+
+ public void Questionfour() {
+   System.out.print("Are black bears actually black? ");
+   String answer = keyboard.next();
+
+   if(answer.equals("yes")) {
+      System.out.println("True, black bears are indeed black");
+      Endoftest();
+   } else if(answer.equals("no")) {
+      System.out.println("False, black bears are actually black");
+      Endoftest();
+   } else {
+      System.out.println("The answer you submitted is a yes or no question, try again");
+      Questionfour();
    }
  }
 
