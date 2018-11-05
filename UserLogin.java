@@ -66,15 +66,15 @@ public void Questionone() {
  }
 
  public void Questiontwo() {
-   System.out.print("Is the sum of 2+2 = 4? ");
+   System.out.print("Does 2 + 2 = 4? ");
    String answer = keyboard.next();
 
    if(answer.equals("yes") || answer.equals("Yes") || answer.equals("yEs") || answer.equals("YEs") || answer.equals("yeS") || answer.equals("YeS") || answer.equals("yES") || answer.equals("YES")) {
-      System.out.println("Correct, 2+2 = 4\n");
+      System.out.println("Correct, 2 + 2 = 4\n");
       i++;
       Questionthree();
    } else if(answer.equals("no") || answer.equals("No") || answer.equals("nO") || answer.equals("NO")) {
-      System.out.println("False, 2+2 = 4\n");
+      System.out.println("False, 2 + 2 = 4\n");
       Questionthree();
    } else {
       System.out.println("The answer you submitted is a yes or no question, try again\n");
@@ -106,13 +106,30 @@ public void Questionone() {
    if(answer.equals("yes") || answer.equals("Yes") || answer.equals("yEs") || answer.equals("YEs") || answer.equals("yeS") || answer.equals("YeS") || answer.equals("yES") || answer.equals("YES")) {
       System.out.println("True, black bears are indeed black\n");
       i++;
-      gradeTest();
+      Questionfive();
    } else if(answer.equals("no") || answer.equals("No") || answer.equals("nO") || answer.equals("NO")) {
       System.out.println("False, black bears are actually black\n");
-      gradeTest();
+      Questionfive();
    } else {
       System.out.println("The answer you submitted is a yes or no question, try again\n");
       Questionfour();
+  }
+ }
+
+ public void Questionfive() {
+   System.out.print("Does 9 x 9 = 81?");
+   String answer = keyboard.next();
+
+   if(answer.equals("yes") || answer.equals("Yes") || answer.equals("yEs") || answer.equals("YEs") || answer.equals("yeS") || answer.equals("YeS") || answer.equals("yES") || answer.equals("YES")) {
+      System.out.println("Correct, 9 x 9 = 81\n");
+      i++;
+      gradeTest();
+   } else if(answer.equals("no") || answer.equals("No") || answer.equals("nO") || answer.equals("NO")) {
+      System.out.println("Incorrect, 9 x 9 = 81\n");
+      gradeTest();
+   } else {
+      System.out.println("The answer you submitted is a yes or no question, try again\n");
+      Questionfive();
   }
  }
 
