@@ -19,7 +19,7 @@ public class IfElseIfUIL
 				return "state bound";
 		else if (uilScore > 240)
 				return "invalid score";
-		return "brh";
+		return "";
 	}
 
 	public static void main(String args[])
