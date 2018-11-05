@@ -5,7 +5,7 @@ public class UserLogin {
 
   public static void main(String[] args) {
     UserLogin authenticate = new UserLogin();
-    authenticate.CreateUser();
+    authenticate.createUser();
   }
 
 Scanner keyboard = new Scanner(System.in);
@@ -13,7 +13,7 @@ Scanner keyboard = new Scanner(System.in);
 public int i = 0;
 public int qc = 4;
 
-public void CreateUser() {
+public void createUser() {
 
   String username;
   String passwordone;
@@ -45,7 +45,7 @@ public void CreateUser() {
 
 public void TryAgain() {
   System.out.println("The passwords that you provided are not identical, please try again.\n");
-  CreateUser();
+  createUser();
 }
 
 public void Questionone() {
