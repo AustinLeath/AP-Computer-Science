@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.lang.System;
+import java.util.concurrent.TimeUnit;
 
 public class UserLogin {
 
@@ -11,7 +12,7 @@ public class UserLogin {
 Scanner keyboard = new Scanner(System.in);
 
 public int i = 0;
-public int qc = 4;
+public int qc = 5;
 
 public void createUser() {
 
@@ -23,6 +24,22 @@ public void createUser() {
   username = keyboard.next();
   System.out.print("\n");
 
+  try {
+    Thread.sleep(500);
+    System.out.print(".");
+    Thread.sleep(500);
+    System.out.print(".");
+    Thread.sleep(500);
+    System.out.print(".");
+    Thread.sleep(500);
+    System.out.print(".");
+    Thread.sleep(500);
+    System.out.print(".\n");
+  }
+  catch(InterruptedException ex) {
+    Thread.currentThread().interrupt();
+  }
+
   System.out.print("New password: ");
   passwordone = keyboard.next();
   System.out.print("\n");
@@ -33,11 +50,11 @@ public void createUser() {
 
   if (passwordone.equals(passwordtwo)) {
       System.out.println("The passwords that you entered are a match!");
-      System.out.println("Here is the user information that you provided:\n");
+      System.out.println("Here is your account information:\n");
       System.out.println("Username: " + username);
       System.out.println("Password: " + passwordone + "\n");
       System.out.println("You will now be asked a series of yes or no questions.\n");
-      Questionone();
+      questionOne();
   } else {
       TryAgain();
   }
@@ -48,76 +65,76 @@ public void TryAgain() {
   createUser();
 }
 
-public void Questionone() {
+public void questionOne() {
   System.out.print("Is the earth round? ");
   String answer = keyboard.next();
 
   if(answer.equals("yes") || answer.equals("Yes") || answer.equals("yEs") || answer.equals("YEs") || answer.equals("yeS") || answer.equals("YeS") || answer.equals("yES") || answer.equals("YES") || answer.equals("Yes")) {
       System.out.println("Correct, the earth is round\n");
       i++;
-      Questiontwo();
+      questionTwo();
   } else if(answer.equals("no") || answer.equals("No") || answer.equals("nO") || answer.equals("NO") || answer.equals("No")) {
       System.out.println("False, the earth is round\n");
-      Questiontwo();
+      questionTwo();
   } else {
       System.out.println("The answer you submitted is a yes or no question, try again\n");
-      Questionone();
+      questionOne();
   }
  }
 
- public void Questiontwo() {
+ public void questionTwo() {
    System.out.print("Does 2 + 2 = 4? ");
    String answer = keyboard.next();
 
    if(answer.equals("yes") || answer.equals("Yes") || answer.equals("yEs") || answer.equals("YEs") || answer.equals("yeS") || answer.equals("YeS") || answer.equals("yES") || answer.equals("YES")) {
       System.out.println("Correct, 2 + 2 = 4\n");
       i++;
-      Questionthree();
+      questionThree();
    } else if(answer.equals("no") || answer.equals("No") || answer.equals("nO") || answer.equals("NO")) {
       System.out.println("False, 2 + 2 = 4\n");
-      Questionthree();
+      questionThree();
    } else {
       System.out.println("The answer you submitted is a yes or no question, try again\n");
-      Questiontwo();
+      questionTwo();
   }
  }
 
- public void Questionthree() {
+ public void questionThree() {
    System.out.print("Is Dallas the capital of Texas? ");
    String answer = keyboard.next();
 
    if(answer.equals("yes") || answer.equals("Yes") || answer.equals("yEs") || answer.equals("YEs") || answer.equals("yeS") || answer.equals("YeS") || answer.equals("yES") || answer.equals("YES")) {
       System.out.println("False, Austin is the capital of Texas\n");
-      Questionfour();
+      questionFour();
    } else if(answer.equals("no") || answer.equals("No") || answer.equals("nO") || answer.equals("NO")) {
       System.out.println("Correct, Austin is the capital of Texas\n");
       i++;
-      Questionfour();
+      questionFour();
    } else {
       System.out.println("The answer you submitted is a yes or no question, try again\n");
-      Questionthree();
+      questionThree();
   }
  }
 
- public void Questionfour() {
+ public void questionFour() {
    System.out.print("Are black bears actually black? ");
    String answer = keyboard.next();
 
    if(answer.equals("yes") || answer.equals("Yes") || answer.equals("yEs") || answer.equals("YEs") || answer.equals("yeS") || answer.equals("YeS") || answer.equals("yES") || answer.equals("YES")) {
       System.out.println("True, black bears are indeed black\n");
       i++;
-      Questionfive();
+      questionFive();
    } else if(answer.equals("no") || answer.equals("No") || answer.equals("nO") || answer.equals("NO")) {
       System.out.println("False, black bears are actually black\n");
-      Questionfive();
+      questionFive();
    } else {
       System.out.println("The answer you submitted is a yes or no question, try again\n");
-      Questionfour();
+      questionFour();
   }
  }
 
- public void Questionfive() {
-   System.out.print("Does 9 x 9 = 81?");
+ public void questionFive() {
+   System.out.print("Does 9 x 9 = 81? ");
    String answer = keyboard.next();
 
    if(answer.equals("yes") || answer.equals("Yes") || answer.equals("yEs") || answer.equals("YEs") || answer.equals("yeS") || answer.equals("YeS") || answer.equals("yES") || answer.equals("YES")) {
@@ -129,7 +146,7 @@ public void Questionone() {
       gradeTest();
    } else {
       System.out.println("The answer you submitted is a yes or no question, try again\n");
-      Questionfive();
+      questionFive();
   }
  }
 
