@@ -24,22 +24,6 @@ public void createUser() {
   username = keyboard.next();
   System.out.print("\n");
 
-  try {
-    Thread.sleep(500);
-    System.out.print(".");
-    Thread.sleep(500);
-    System.out.print(".");
-    Thread.sleep(500);
-    System.out.print(".");
-    Thread.sleep(500);
-    System.out.print(".");
-    Thread.sleep(500);
-    System.out.print(".\n");
-  }
-  catch(InterruptedException ex) {
-    Thread.currentThread().interrupt();
-  }
-
   System.out.print("New password: ");
   passwordone = keyboard.next();
   System.out.print("\n");
@@ -53,7 +37,23 @@ public void createUser() {
       System.out.println("Here is your account information:\n");
       System.out.println("Username: " + username);
       System.out.println("Password: " + passwordone + "\n");
+      System.out.println("Take a moment to review the following:\n");
       System.out.println("You will now be asked a series of yes or no questions.\n");
+        try {
+          Thread.sleep(1000);
+          System.out.print(".");
+          Thread.sleep(1000);
+          System.out.print(".");
+          Thread.sleep(1000);
+          System.out.print(".");
+          Thread.sleep(1000);
+          System.out.print(".");
+          Thread.sleep(1000);
+          System.out.print(".");
+        }
+        catch(InterruptedException ex) {
+          Thread.currentThread().interrupt();
+        }
       questionOne();
   } else {
       TryAgain();
