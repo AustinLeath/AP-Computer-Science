@@ -3,6 +3,7 @@ public class PermuteString
     // Function to generate permutations
     static void permute(String input)
     {
+        int z = 0;
         int n = input.length();
 
         // Number of permutations is 2^n
@@ -24,8 +25,11 @@ public class PermuteString
             }
 
             // Printing current combination
-            System.out.print(combination);
-            System.out.print("   ");
+            z++;
+            System.out.print(z + " ");
+            System.out.println(combination);
+
+
         }
     }
   }
