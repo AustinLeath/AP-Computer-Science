@@ -1,9 +1,12 @@
 public class forloop {
   public static void main(String[] args) {
-for(int m=37; m>0; m=m-4)
+int total=0;
+for(int s=1; s<19; s++)
 {
-   System.out.print(m + " ");
+   total=total+s;
 }
+System.out.println(total);
+
 
    }
   }
