@@ -1,7 +1,8 @@
 import java.lang.System;
 import java.util.Scanner;
-public class HelloWorld {
+public class TableRunner {
   public static void main(String[] args) {
-    System.out.print("Hello World");
+    Table table = new Table(10,5);
+    table.print();
   }
 }

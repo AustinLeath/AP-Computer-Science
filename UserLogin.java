@@ -15,23 +15,23 @@ public class UserLogin {
    public int qc = 5;
 
    public void createUser() {
-   
+
       String username;
       String passwordone;
       String passwordtwo;
-   
+
       System.out.print("Enter your desired username: ");
       username = keyboard.next();
       System.out.print("\n");
-   
+
       System.out.print("New password: ");
       passwordone = keyboard.next();
       System.out.print("\n");
-   
+
       System.out.print("Re enter your password: ");
       passwordtwo = keyboard.next();
       System.out.print("\n");
-   
+
       if (passwordone.equals(passwordtwo)) {
          System.out.println("The passwords that you entered are a match!");
          System.out.println("Here is your account information:\n");
@@ -40,16 +40,16 @@ public class UserLogin {
          System.out.println("Take a moment to review the following:\n");
          System.out.println("You will now be asked a series of yes or no questions.\n");
          try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
             System.out.print(".");
-            Thread.sleep(1000);
+            Thread.sleep(500);
             System.out.print(".");
-            Thread.sleep(1000);
+            Thread.sleep(500);
             System.out.print(".");
-            Thread.sleep(1000);
+            Thread.sleep(500);
             System.out.print(".");
-            Thread.sleep(1000);
-            System.out.print(".");
+            Thread.sleep(500);
+            System.out.println(".");
          }
          catch(InterruptedException ex) {
             Thread.currentThread().interrupt();
@@ -68,16 +68,16 @@ public class UserLogin {
    public void questionOne() {
       System.out.print("Is the earth round? ");
       String answer = keyboard.next();
-   
-      if(answer.equals("yes") || answer.equals("Yes") || answer.equals("yEs") || answer.equals("YEs") || answer.equals("yeS") || answer.equals("YeS") || answer.equals("yES") || answer.equals("YES") || answer.equals("Yes")) {
+
+      if(answer.toUpperCase().equals("YES")) {
          System.out.println("Correct, the earth is round\n");
          i++;
          questionTwo();
-      } else if(answer.equals("no") || answer.equals("No") || answer.equals("nO") || answer.equals("NO") || answer.equals("No")) {
+      } else if(answer.toUpperCase().equals("NO")) {
          System.out.println("False, the earth is round\n");
          questionTwo();
       } else {
-         System.out.println("The answer you submitted is a yes or no question, try again\n");
+         System.out.println("This question is a yes or no question, please try again\n");
          questionOne();
       }
    }
@@ -85,16 +85,16 @@ public class UserLogin {
    public void questionTwo() {
       System.out.print("Does 2 + 2 = 4? ");
       String answer = keyboard.next();
-   
-      if(answer.equals("yes") || answer.equals("Yes") || answer.equals("yEs") || answer.equals("YEs") || answer.equals("yeS") || answer.equals("YeS") || answer.equals("yES") || answer.equals("YES")) {
+
+      if(answer.toUpperCase().equals("YES")) {
          System.out.println("Correct, 2 + 2 = 4\n");
          i++;
          questionThree();
-      } else if(answer.equals("no") || answer.equals("No") || answer.equals("nO") || answer.equals("NO")) {
+      } else if(answer.toUpperCase().equals("NO")) {
          System.out.println("False, 2 + 2 = 4\n");
          questionThree();
       } else {
-         System.out.println("The answer you submitted is a yes or no question, try again\n");
+         System.out.println("This question is a yes or no question, please try again\n");
          questionTwo();
       }
    }
@@ -102,16 +102,16 @@ public class UserLogin {
    public void questionThree() {
       System.out.print("Is Dallas the capital of Texas? ");
       String answer = keyboard.next();
-   
-      if(answer.equals("yes") || answer.equals("Yes") || answer.equals("yEs") || answer.equals("YEs") || answer.equals("yeS") || answer.equals("YeS") || answer.equals("yES") || answer.equals("YES")) {
+
+      if(answer.toUpperCase().equals("YES")) {
          System.out.println("False, Austin is the capital of Texas\n");
          questionFour();
-      } else if(answer.equals("no") || answer.equals("No") || answer.equals("nO") || answer.equals("NO")) {
+      } else if(answer.toUpperCase().equals("NO")) {
          System.out.println("Correct, Austin is the capital of Texas\n");
          i++;
          questionFour();
       } else {
-         System.out.println("The answer you submitted is a yes or no question, try again\n");
+         System.out.println("This question is a yes or no question, please try again\n");
          questionThree();
       }
    }
@@ -119,16 +119,16 @@ public class UserLogin {
    public void questionFour() {
       System.out.print("Are black bears actually black? ");
       String answer = keyboard.next();
-   
-      if(answer.equals("yes") || answer.equals("Yes") || answer.equals("yEs") || answer.equals("YEs") || answer.equals("yeS") || answer.equals("YeS") || answer.equals("yES") || answer.equals("YES")) {
+
+      if(answer.toUpperCase().equals("YES")) {
          System.out.println("True, black bears are indeed black\n");
          i++;
          questionFive();
-      } else if(answer.equals("no") || answer.equals("No") || answer.equals("nO") || answer.equals("NO")) {
+      } else if(answer.toUpperCase().equals("NO")) {
          System.out.println("False, black bears are actually black\n");
          questionFive();
       } else {
-         System.out.println("The answer you submitted is a yes or no question, try again\n");
+         System.out.println("This question is a yes or no question, please try again\n");
          questionFour();
       }
    }
@@ -136,16 +136,16 @@ public class UserLogin {
    public void questionFive() {
       System.out.print("Does 9 x 9 = 81? ");
       String answer = keyboard.next();
-   
-      if(answer.equals("yes") || answer.equals("Yes") || answer.equals("yEs") || answer.equals("YEs") || answer.equals("yeS") || answer.equals("YeS") || answer.equals("yES") || answer.equals("YES")) {
+
+      if(answer.toUpperCase().equals("YES")) {
          System.out.println("Correct, 9 x 9 = 81\n");
          i++;
          gradeTest();
-      } else if(answer.equals("no") || answer.equals("No") || answer.equals("nO") || answer.equals("NO")) {
+      } else if(answer.toUpperCase().equals("NO")) {
          System.out.println("Incorrect, 9 x 9 = 81\n");
          gradeTest();
       } else {
-         System.out.println("The answer you submitted is a yes or no question, try again\n");
+         System.out.println("This question is a yes or no question, please try again\n");
          questionFive();
       }
    }

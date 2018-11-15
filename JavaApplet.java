@@ -6,8 +6,8 @@ import javax.swing.JFrame;
 
 public class JavaApplet extends JApplet {
    public void init() {
-      setBackground(Color.white);
-      setForeground(Color.white);
+      setBackground(Color.black);
+      setForeground(Color.black);
    }
    public void paint(Graphics g) {
       Graphics2D g2 = (Graphics2D) g;
