@@ -1,11 +1,12 @@
-public class Table
+class Table
 {
    private int upperBound;
    private int multiplier;
 
    public Table(int bound, int mult)
    {
-     setNums(bound,mult);
+     upperBound = bound;
+     multiplier = mult;
    }
 
    public void setNums(int bound, int mult)
@@ -16,9 +17,8 @@ public class Table
 
    public void print()
    {
-     for(int upperBound < 50; )
-     {
-
+     for(int x = 1; x <= upperBound;  x++){
+       System.out.println(x + " - " + multiplier * x);
      }
    }
 }

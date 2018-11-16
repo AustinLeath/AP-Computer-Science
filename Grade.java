@@ -40,7 +40,6 @@ public class Grade
 
 	public String toString()
 	{
-		getLetterGrade();
 		return numGrade + " is a " + getLetterGrade();
 	}
 }
