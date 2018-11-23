@@ -154,6 +154,3 @@ public class UserLogin {
       System.out.println("Thank you for your responses, you answered " + i + " out of " + qc + " questions correctly.");
    }
 }
-
-//combinations of the word "yes": yes Yes yEs YEs yeS YeS yES YES
-//combinations of the word "no": no No nO NO
