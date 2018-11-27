@@ -49,7 +49,7 @@ public class UserLogin {
             Thread.sleep(500);
             System.out.print(".");
             Thread.sleep(500);
-            System.out.println(".");
+            System.out.println(".\n");
          }
          catch(InterruptedException ex) {
             Thread.currentThread().interrupt();
@@ -98,7 +98,6 @@ public class UserLogin {
          questionTwo();
       }
    }
-
    public void questionThree() {
       System.out.print("Is Dallas the capital of Texas? ");
       String answer = keyboard.next();
