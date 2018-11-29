@@ -1,32 +1,23 @@
-//(c) A+ Computer Science
-//www.apluscompsci.com
-//Name -
-
 import static java.lang.System.*;
 
 public class ReverseNumber
 {
    private int number;
 
-	//add constructors <---- ???
-
-  public Number(int number) {
-		setNumber(number);
-	}
-
-  public void setNumber(int number) {
-    num = number;
+  public void setNumber(int num) {
+    number = num;
   }
 
 	public int getReverse() {
 		int rev= 0;
 		while(number > 0) {
-      rev = (rev*10+number);
+      rev = rev * 10 + number % 10;
+			number = number / 10;
     }
     return rev;
 	}
 
   public String toString() {
-    return "test " + number;
+    return number + " reversed is: " + getReverse();
   }
 }
