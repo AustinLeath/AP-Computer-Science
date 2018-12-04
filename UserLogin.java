@@ -40,15 +40,29 @@ public class UserLogin {
          System.out.println("Take a moment to review the following:\n");
          System.out.println("You will now be asked a series of yes or no questions.\n");
          try {
-            Thread.sleep(500);
+            Thread.sleep(50);
             System.out.print(".");
-            Thread.sleep(500);
+            Thread.sleep(50);
             System.out.print(".");
-            Thread.sleep(500);
+            Thread.sleep(50);
             System.out.print(".");
-            Thread.sleep(500);
+            Thread.sleep(50);
             System.out.print(".");
-            Thread.sleep(500);
+            Thread.sleep(50);
+            System.out.print(".");
+            Thread.sleep(50);
+            System.out.print(".");
+            Thread.sleep(50);
+            System.out.print(".");
+            Thread.sleep(50);
+            System.out.print(".");
+            Thread.sleep(50);
+            System.out.print(".");
+            Thread.sleep(50);
+            System.out.print(".");
+            Thread.sleep(50);
+            System.out.print(".");
+            Thread.sleep(50);
             System.out.println(".\n");
          }
          catch(InterruptedException ex) {
