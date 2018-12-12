@@ -1,8 +1,3 @@
-//(c) A+ Computer Science
-//www.apluscompsci.com
-//Name - Austin Leath
-//Date - 11/5/18
-
 import static java.lang.System.*;
 import java.util.Scanner;
 

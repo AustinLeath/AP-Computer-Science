@@ -9,13 +9,11 @@ public class Adder
      answer = 0;
    }
 
-	//method add totals up numOne and numTwo
    public void add()
    {
      answer = numOne + numTwo;
    }
 
-	//method print displays the sum of numOne and numTwo
    public void print()
    {
      System.out.println(numOne + " + " + numTwo + " = " + answer);

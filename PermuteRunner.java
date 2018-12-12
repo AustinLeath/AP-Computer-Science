@@ -1,4 +1,3 @@
-// Driver Program to test above function
 import java.lang.System;
 import java.util.Scanner;
 

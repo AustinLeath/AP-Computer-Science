@@ -4,7 +4,6 @@ public class QuizRunner
 {
    public static void main(String[] args)
    {
-     //client code to test the Quiz class
       Quiz test = new Quiz();
       test.one();
       test.one();
@@ -13,7 +12,6 @@ public class QuizRunner
       test.two();
       test.one();
       test.three();
-      
       test.two();
    }
 }

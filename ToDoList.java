@@ -1,31 +1,9 @@
-/*
- *
- *  PROGRAM:  ToDoList.java   (applet)
- *
- *  PURPOSE:  This applet can be used to maintain a simple "To-Do" list,
- *            with the list of "to-do" items stored on the web server.
- *
- *            This program actually calls a companion CGI program on the
- *            web server.  This CGI program performs the actual file-reading/
- *            file-writing functions.
- *
- * This example is from Developer's Daily (http://www.DevDaily.com).
- * Copyright (c) 1998 DevDaily Interactive, Inc.
- * This example is provided WITHOUT ANY WARRANTY either expressed or implied.
- * You may study, use, modify, and distribute it for non-commercial purposes
- * as long as this header is retained in the file.
- * For any commercial use, contact our editor (editor@DevDaily.com).
- *
-*/
-
 import java.awt.*;
 import java.applet.*;
 import java.net.*;
 import java.io.*;
 
 public class ToDoList extends Applet {
-
-    //----------------------<  getToDoList()  >---------------------//
 
     void getToDoList () {
 
@@ -37,14 +15,10 @@ public class ToDoList extends Applet {
 
            statusTextField.setText("calling server ...");
 
-           url = new URL(CGI_URL);           // here's where we create the url
+           url = new URL(CGI_URL);
            urlConn = url.openConnection();
            urlConn.setDoInput(true);
            urlConn.setUseCaches(false);
-
-           //------------------------------------------------//
-           // read the To-Do List data from the HTTP server  //
-           //------------------------------------------------//
 
            dis = new DataInputStream(urlConn.getInputStream());
            String s;
@@ -61,9 +35,6 @@ public class ToDoList extends Applet {
        catch (IOException ioe) { }
     }
 
-
-    //----------------------<  addItem()  >---------------------//
-
     void addItem () {
 
        try {
@@ -73,19 +44,11 @@ public class ToDoList extends Applet {
            DataOutputStream   dos;
            DataInputStream    dis;
 
-           //---------------------------------------------//
-           // get the "to-do" item the user wants to add  //
-           //---------------------------------------------//
-
            String itemToAdd = addTextField.getText();
            if (itemToAdd.trim().equals("")) {
               statusTextField.setText("nothing to add");
               return;
            }
-
-           //------------------------------------------------------------------//
-           // call the server, and try to add the item by simulating a "GET"   //
-           //------------------------------------------------------------------//
 
            statusTextField.setText("calling server ...");
 
@@ -97,54 +60,38 @@ public class ToDoList extends Applet {
            urlConn.setUseCaches(false);
            urlConn.setRequestProperty ("Content-Type", "application/x-www-form-urlencoded");
 
-           // the server responds by saying "SUCCESS" or "FAILURE"
-
            dis = new DataInputStream(urlConn.getInputStream());
            String s = dis.readLine();
            dis.close();
 
            if (s.equals("SUCCESS")) {
-             getToDoList();
-             addTextField.setText("");
-             statusTextField.setText("item was added to list");
+              getToDoList();
+              addTextField.setText("");
+              statusTextField.setText("item was added to list");
            } else {
-             //  if the return message does not say "SUCCESS", an error msg.
-             //  should be given to us
-             statusTextField.setText(s);
+              statusTextField.setText(s);
            }
 
        }
        catch (MalformedURLException mue) {
-          // used during debugging
           statusTextField.setText("mue error");
        }
        catch (IOException ioe) {
-          // used during debugging
           statusTextField.setText("IO Exception");
        }
     }
-
-
-    //----------------------<  refreshButtonClicked()  >---------------------//
 
 	void refreshButtonClicked(Event e) {
 	    getToDoList();
 	}
 
-
-    //----------------------<  addButtonClicked()  >---------------------//
-
 	void addButtonClicked(Event e) {
 	    addItem();
 	}
 
-
-    //----------------------------<  init()  >---------------------------//
-
 	public void init() {
 		super.init();
 
-		//{{INIT_CONTROLS
 		setLayout(null);
 		addNotify();
 		resize(383,350);
@@ -190,7 +137,6 @@ public class ToDoList extends Applet {
 		label1.setFont(new Font("Dialog", Font.PLAIN, 12));
 		label1.setForeground(new Color(12632256));
 		add(label1);
-		//}}
 
 		getToDoList();
 	}
@@ -207,7 +153,6 @@ public class ToDoList extends Applet {
 		return super.handleEvent(event);
 	}
 
-	//{{DECLARE_CONTROLS
 	java.awt.Button addButton;
 	java.awt.Label newLabel;
 	java.awt.TextField addTextField;
@@ -217,7 +162,6 @@ public class ToDoList extends Applet {
 	java.awt.TextField statusTextField;
 	java.awt.Label statusLabel;
 	java.awt.Label label1;
-	//}}
 
 	String dataFile = "ToDoList.dat";
 	String CGI_URL = "http://www.devdaily.com/cgi-bin/ToDoList.cgi";

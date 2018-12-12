@@ -18,7 +18,6 @@ public class CoolNumbers
 			   if(isCoolNumber(num))
 			   {
 			   		count = count + 1;
-
 			   }
 		}
 		return count;

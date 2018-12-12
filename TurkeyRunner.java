@@ -1,8 +1,3 @@
-//(c) A+ Computer Science
-// www.apluscompsci.com
-
-//methods example 2 and 3
-
 import static java.lang.System.*;
 
 public class TurkeyRunner
@@ -26,8 +21,5 @@ public class TurkeyRunner
       easy.sayName();
       easy.speak();
       easy.quickMath();
-      //make more Turkeys and
-      //call the old methods and
-      //the new method you created
    }
 }

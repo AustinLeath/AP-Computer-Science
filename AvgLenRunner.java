@@ -1,14 +1,9 @@
-//(c) A+ Computer Science
-//www.apluscompsci.com
-//Name -
-//Date -
-
 public class AvgLenRunner
 {
 	public static void main( String args[] )
 	{
 		AvgLen s = new AvgLen();
-		
+
 		System.out.println( s.go( "dog", "cats" ) ) ;
 		System.out.println( s.go( "aplus", "pigs" ) ) ;
 		System.out.println( s.go( "catgiraffe", "apluscompsci" ) ) ;
@@ -20,6 +15,6 @@ public class AvgLenRunner
 		System.out.println( s.go( "wow", "eplus" ) ) ;
 		System.out.println( s.go( "catsand" , "aplusdogsaplus" ) ) ;
 		System.out.println( s.go( "7", "77777" ) ) ;
-		
+
 	}
 }

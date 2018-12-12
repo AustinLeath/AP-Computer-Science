@@ -1,8 +1,3 @@
-//(c) A+ Computer Science
-//www.apluscompsci.com
-//Name - Austin Leath
-//Date - 10/19/18
-
 public class First
 {
    public static String go( String a )
