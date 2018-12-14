@@ -2,8 +2,12 @@
 #include <stdlib.h>
 #include <math.h>
 
-int main()
-{
-    printf("Hello World");
+int main() {
+int count = 10;
+int tri = 3;
+
+for (size_t tri = 0; tri < count; tri++) {
+    printf(tri);
+}
     return(0);
 }

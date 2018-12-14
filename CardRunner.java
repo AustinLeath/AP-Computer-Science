@@ -1,7 +1,3 @@
-//(c) A+ Computer Science
-//www.apluscompsci.com
-//Name - Austin Leath
-
 import static java.lang.System.*;
 import java.awt.Color;
 

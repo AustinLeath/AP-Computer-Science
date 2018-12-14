@@ -1,8 +1,3 @@
-//(c) A+ Computer Science 
-//www.apluscompsci.com
-//Name -
-//Date -
-
 public class RectRunner
 {
 	public static void main( String[] args )
@@ -16,16 +11,3 @@ public class RectRunner
 		System.out.println( Rect.perimeter(18,16) );
 	}
 }
-
-
-/*
-
-34.0
-412.0
-90.0
-530.0
-216.0
-28.0
-68.0
-
-*/

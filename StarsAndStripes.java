@@ -1,11 +1,3 @@
-// A+ Computer Science
-//www.apluscompsci.com
-
-//Name - Austin Leath
-//Date - 9/18/18
-//Class - AP Computer Science
-//Lab  -
-
 import static java.lang.System.*;
 
 public class StarsAndStripes

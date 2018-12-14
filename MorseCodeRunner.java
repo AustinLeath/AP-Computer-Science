@@ -17,22 +17,16 @@ public class MorseCodeRunner
 		obj.setChar('3');
 		out.println(obj.getMorseCode() + "\n" + obj + "\n");
 
-
 		obj.setChar('Z');
 		out.println(obj.getMorseCode() + "\n" + obj + "\n");
-
 
 		obj.setChar('8');
 		out.println(obj.getMorseCode() + "\n" + obj + "\n");
 
-
 		obj.setChar('F');
 		out.println(obj.getMorseCode() + "\n" + obj + "\n");
 
-
 		obj.setChar('0');
 		out.println(obj.getMorseCode() + "\n" + obj + "\n");
-
-
 	}
 }

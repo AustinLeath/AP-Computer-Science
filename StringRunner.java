@@ -1,9 +1,3 @@
-//? A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  -
-
 import static java.lang.System.*;
 import java.util.Scanner;
 
@@ -18,17 +12,17 @@ public class StringRunner
 		String s = keyboard.nextLine();
 		test.setString(s);
 		System.out.println(test);
-	
+
 		System.out.println("Enter a word.");
 		s = keyboard.nextLine();
 		test.setString(s);
 		System.out.println(test);
-		
-		
+
+
 		System.out.println("Enter a word.");
 		s = keyboard.nextLine();
 		test.setString(s);
 		System.out.println(test);
-	
-	}	
+
+	}
 }

@@ -8,10 +8,8 @@ public class RPSRunner {
         Scanner replay = new Scanner(in);
         String playAgain = "";
 
-        //add in a do while loop after you get the basics up and running
         do {
             out.print("Rock-Paper-Scissors - pick your weapon[R,P,S]:: ");
-            //read in the player value
             String player = keyboard.nextLine();
             out.println();
             RockPaperScissors game = new RockPaperScissors(player);

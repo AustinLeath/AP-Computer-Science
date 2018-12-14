@@ -1,5 +1,3 @@
-//(c) A+ Computer Science
-// www.apluscompsci.com
 import static java.lang.System.*;
 
 public class Turkey {

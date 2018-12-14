@@ -1,9 +1,3 @@
-//� A+ Computer Science  -  www.apluscompsci.com
-//Name - Austin Leath
-//Date - 9/26/18
-//Class - AP Computer Science
-//Lab  - rm722
-
 public class LineRunner
 {
    public static void main(String[] args )
