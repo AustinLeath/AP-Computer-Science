@@ -2,39 +2,35 @@ import static java.lang.System.*;
 
 public class Box
 {
-  private int size;
+   private int size;
 
 	public Box()
 	{
+    setSize(0);
 	}
 
 	public Box(int count)
 	{
     setSize(count);
-  }
+	}
 
 	public void setSize(int count)
 	{
     size = count;
 	}
 
-	public int getSize()
-	{
-    count.getSize();
-		return 0;
-	}
-
 	public String toString()
 	{
-		String output="test";
+		String output="";
 
-    for (int i = 1; i <= 5; i++) {
-    for (int j = 1; j <= 10; j++) {
-    System.out.print("*");
-    }
-    System.out.println();
-    // to end the line
-    }
+      for(int x = 1; x<=size; x++)
+      {
+         for(int y=x; y<=size; y++ )
+          output = output + "*";
+         for(int z=x; z>0; z--)
+          output = output + "#";
+          output = output + "\n";
+      }
 		return output;
 	}
 }
