@@ -27,19 +27,14 @@ public class Box
 	public String toString()
 	{
 		String output="test";
-    /*
-    {
-    loop j
-    {
-    output += "*";
+
+    for (int i = 1; i <= 5; i++) {
+    for (int j = 1; j <= 10; j++) {
+    System.out.print("*");
     }
-    loop k
-    {
-    output += "#";
+    System.out.println();
+    // to end the line
     }
-    output += "\n";
-    }
-    */
 		return output;
 	}
 }

@@ -1,3 +1,7 @@
+//(c) A+ Computer Science
+//www.apluscompsci.com
+//Name -
+
 import static java.lang.System.*;
 
 public class Triples
@@ -6,6 +10,7 @@ public class Triples
 
 	public Triples()
 	{
+		this(0);
 	}
 
 	public Triples(int num)
@@ -22,20 +27,12 @@ public class Triples
 	{
 		int max = 0;
 
-    /*
-    while (1 == 1) {
-      if (1 == 1) {
-    		return 1;
-      }
-    }
-    */
-    return 1;
-
-	   }
+		return 1;
+	}
 
 	public String toString()
 	{
-		String output="1 2 3";
+		String output="";
 		return output+"\n";
 	}
 }
