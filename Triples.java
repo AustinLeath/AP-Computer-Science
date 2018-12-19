@@ -21,28 +21,43 @@ public class Triples
 
 	private int greatestCommonFactor(int a, int b, int c)
 	{
-    String triples = "";
-		int max = number;
+	int max = number;
 
-    for(int x = 1; x < max; x++) {
-      for(int y = 1; y < max; y++) {
-        for(int z = 1; z < max; z++){
-
-          if(Math.pow(a,2) + Math.pow(b,2) == Math.pow(c,2)) {
-            System.out.print(a + " " + b + " " + c);
-          }
-
-        }
+   for(int d = a; d >= 1; d--)
+   {
+      if((a%d==0) && (b%d==0) && (c%d==0)) {
+        return d;
       }
-    }
-
-
-		return 1;
-	}
+   }
+   return 2;
+ }
 
 	public String toString()
 	{
-		String output= greatestCommonFactor();
-		return output+"\n";
+    int max = number;
+    String output = "";
+    for(int x = 1; x < max; x++)
+    {
+      for(int y = 1; y < max; y++)
+      {
+        for(int z = 1; z < max; z++)
+        {
+          if((x<y) && (z>y))
+          {
+            if(Math.pow(x,2) + Math.pow(y,2) == Math.pow(z,2))
+            {
+              if(((x%2==0) && (y%2==1)) || ((x%2==1) && (y%2==0)))
+              {
+                if(greatestCommonFactor(x, y, z) == 1)
+                {
+                  output = output + x + " " + y + " " + z + "\n";
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    return output;
 	}
 }
