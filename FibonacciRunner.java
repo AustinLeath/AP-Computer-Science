@@ -51,7 +51,7 @@ public class FibonacciRunner
       test.setNumber(1);
       System.out.println(test);
       
-      test.setSize(1);  
+      test.setSize(4);
       
       test.setNumber(1);
       System.out.println(test);
@@ -61,6 +61,5 @@ public class FibonacciRunner
       
       test.setNumber(11);
       System.out.println(test);
-     
 	}
 }

@@ -1,7 +1,7 @@
 
 public class Fibonacci {
 	private int[] array; //array
-   public int number = 1; // instance variable
+   public int number = 0; // instance variable
    public int size = 0;
    public Fibonacci() {
    
@@ -25,18 +25,17 @@ public class Fibonacci {
            array[1] = 1;
             if(size > 2)
             {
-               for (int i = 2; i < size; i++) 
+               for(int i = 2; i < size; i++)
                {
-      			   array[i] = array[i - 1] + array[i - 2];
-      		   }
+               array[i] = array[i - 1] + array[i - 2];
+               }
             }
          }
-           number = array[num-1];
-     }
-     else
-     {
-     number = -1;
-     }       
+         number = array[num - 1];
+        }
+        else {
+         number = -1;
+        }
 	}
 
 	public int getNumber() {
