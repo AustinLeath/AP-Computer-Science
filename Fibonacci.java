@@ -1,20 +1,20 @@
-
 public class Fibonacci {
 	private int[] array; //array
    public int number = 0; // instance variable
    public int size = 0;
-   public Fibonacci() {
-   
-   }
-   
+
+  public Fibonacci() {
+
+  }
+
 	public Fibonacci(int num) {
 		number = num;
 	}
-   
-   public void setSize(int siz) {
-      size = siz;
-      array = new int[size];
-   }
+
+  public void setSize(int siz) {
+  	size = siz;
+    array = new int[size];
+  }
 
 	public void setNumber(int num) {
       if(size > num)
@@ -32,10 +32,10 @@ public class Fibonacci {
             }
          }
          number = array[num - 1];
-        }
-        else {
-         number = -1;
-        }
+      }
+	    else {
+	      number = -1;
+	    }
 	}
 
 	public int getNumber() {
