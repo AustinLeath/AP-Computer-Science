@@ -17,7 +17,7 @@ public class Fibonacci {
   }
 
 	public void setNumber(int num) {
-      if(size > num)
+      if(size >= num)
       {
         array[0] = 1;
          if(size > 1)
@@ -39,8 +39,7 @@ public class Fibonacci {
 	}
 
 	public int getNumber() {
-      int numout = number;
-      return numout;
+      return number;
 	}
 
 	public String toString() {
