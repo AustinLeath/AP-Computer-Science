@@ -1,12 +1,11 @@
 #include <iostream>
-#include <cmath> 
+#include <cmath>
 using namespace std;
- 
+
 int main() {
 int mmr;
 int elo;
 int goal;
-
 
 cout << "Enter your current MMR: ";
 cin >> mmr;
@@ -19,7 +18,6 @@ cin >> goal;
 
 int equation = ceil((goal - mmr) / elo);
 
-
     if (equation == 1) {
         cout << " match to reach your rank goal " << equation;
     } else if (equation > 1) {
@@ -29,4 +27,4 @@ int equation = ceil((goal - mmr) / elo);
     }
 
    return 0;
-}
+ }
