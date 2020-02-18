@@ -5,6 +5,7 @@ int main()
 {
     int counter = 0;
     int number;
+    cout << "Enter a number to count to: ";
     cin >> number;
     for(int i = number; i < 25; i++) {
         cout << "test\n";
